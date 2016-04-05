@@ -1,0 +1,14 @@
+<% include header %>
+    <h1>删除学生信息</h1>
+    <form method="post">
+        <ul>
+            <% for(var i = 0; i < result.length; i++) { %>
+            <li>
+                <label for="student">姓名：<%= result[i].name %>，学号：<%= result[i].studentId %></label>
+                <input type="radio" name="student" value=<%= result[i]._id%>>
+            </li>
+            <% } %>
+        </ul>
+        <button type="submit">确定</button>
+    </form>
+<% include footer %>

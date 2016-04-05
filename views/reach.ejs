@@ -1,0 +1,18 @@
+<% include header %>
+    <h1>查找学生信息</h1>
+    <form method="post">
+        <input type="radio" checked name="reach_type" value="0" id="_1">
+        <label for="_1">按姓名查找</label>
+        <input type="radio" name="reach_type" value="1" id="_2">
+        <label for="_2">按学号查找</label>
+        <br><br>
+        <input type="text" name="keyword">
+        <button type="submit">查找</button>
+    </form>
+    <% if(result) { %>
+        <h2>查询结果：</h2>
+        姓名：<%= result[0].name %>，学号：<%= result[0].studentId %>
+        <br><br>
+        <a href='/'>查询完成 点击返回主页</a>
+    <% } %>
+<% include footer %>

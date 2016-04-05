@@ -1,0 +1,16 @@
+<% include header %>
+    <h1>修改学生信息</h1>
+    <form method="post">
+        <ul>
+            <% for(var i = 0; i < result.length; i++) { %>
+            <li>
+                姓名：<input type="text" name="name" value=<%= result[i].name %>>
+                学号：<input type="text" name="student_id" value=<%= result[i].studentId %>>
+                <input hidden type="text" name="_id" value=<%= result[i]._id %>>
+                <input type="radio" name='num' value=<%= i %>>
+            </li>
+            <% } %>
+        </ul>
+        <button type="submit">确定</button>
+    </form>
+<% include footer %>
