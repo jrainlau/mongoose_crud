@@ -1,0 +1,2 @@
+# mongoose_crud
+使用express与mongoose对mongodb数据库进行增删改查操作demo
